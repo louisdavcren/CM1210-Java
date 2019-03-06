@@ -1,4 +1,4 @@
-public class player {
+public class playerEntry {
 
 	private String playerName;
 	private String playerID;
@@ -9,7 +9,7 @@ public class player {
 	private String homeStadiumTown;
 	private String homeStadiumPostcode;
 
-	public player( ) {
+	public playerEntry( ) {
 		playerName = "";
 		playerID = "";
 		careerTriesScored = 0;
@@ -20,7 +20,7 @@ public class player {
 		homeStadiumPostcode = "";
 	}
 
-	public player( String inPlayerName, String inPlayerID, int inCareerTriesScored, String inTeamName, String inTeamID, String inHomeStadiumStreet, String inHomeStadiumTown, String inHomeStadiumPostcode ) {
+	public playerEntry( String inPlayerName, String inPlayerID, int inCareerTriesScored, String inTeamName, String inTeamID, String inHomeStadiumStreet, String inHomeStadiumTown, String inHomeStadiumPostcode ) {
 		playerName = inPlayerName;
 		playerID = inPlayerID;
 		careerTriesScored = inCareerTriesScored;
