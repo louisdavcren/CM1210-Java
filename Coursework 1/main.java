@@ -16,6 +16,7 @@ public class main {
 			while( in.hasNextLine() ) {
 
 				String line = in.nextLine();
+				in.nextLine();
 				String[] parts = line.split(",");
 				String playerName = parts[0];
 				String playerID = parts[1];
@@ -64,12 +65,13 @@ public class main {
 
 		Scanner in = new Scanner( System.in );
 		System.out.println( "no of entries: " );
-		int noEntires = in.nextInt();
+		int noEntries = in.nextInt();
+		in.nextLine();
 
 		try {
 			playerStore store = new playerStore();
 
-			for (int i = 0; i < noEntires; i++) {	 
+			for (int i = 0; i < noEntries; i++) {	 
 
 				System.out.println( "entry: " + i );
 
@@ -98,12 +100,10 @@ public class main {
 				String homeStadiumPostcode = in.nextLine();
 
 				store.add( playerName, playerID, careerTriesScored, teamName, teamID, homeStadiumStreet, homeStadiumTown, homeStadiumPostcode );
-			}
-			System.out.println( store );
 
+			}
 			writeFile data = new writeFile(filename, true);
-			data.writeToFile( store );
-			
+			data.writeToFile( store.toString() );
 		}
 
 		catch( Exception e ) {

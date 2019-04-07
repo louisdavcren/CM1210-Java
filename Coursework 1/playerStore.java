@@ -15,7 +15,8 @@ public class playerStore {
 	public String toString( ) {
 		StringBuffer temp = new StringBuffer();
 		for (int i = 0; i < entries.size(); ++i) {
-			temp.append( entries.get(i).toString() + ", " );
+			temp.append( entries.get(i).toString() + "\t" );
+			temp.append("\n");
 		}
 		return temp.toString();
 	}
