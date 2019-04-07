@@ -2,7 +2,7 @@ public class playerEntry {
 
 	private String playerName;
 	private String playerID;
-	private int careerTriesScored;
+	private String careerTriesScored;
 	private String teamName;
 	private String teamID;
 	private String homeStadiumStreet;
@@ -12,7 +12,7 @@ public class playerEntry {
 	public playerEntry( ) {
 		playerName = "";
 		playerID = "";
-		careerTriesScored = 0;
+		careerTriesScored = "0";
 		teamName = "";
 		teamID = "";
 		homeStadiumStreet = "";
@@ -20,7 +20,7 @@ public class playerEntry {
 		homeStadiumPostcode = "";
 	}
 
-	public playerEntry( String inPlayerName, String inPlayerID, int inCareerTriesScored, String inTeamName, String inTeamID, String inHomeStadiumStreet, String inHomeStadiumTown, String inHomeStadiumPostcode ) {
+	public playerEntry( String inPlayerName, String inPlayerID, String inCareerTriesScored, String inTeamName, String inTeamID, String inHomeStadiumStreet, String inHomeStadiumTown, String inHomeStadiumPostcode ) {
 		playerName = inPlayerName;
 		playerID = inPlayerID;
 		careerTriesScored = inCareerTriesScored;
@@ -39,7 +39,7 @@ public class playerEntry {
 		return playerID;
 	}
 
-	public int getCareerTriesScored( ) {
+	public String getCareerTriesScored( ) {
 		return careerTriesScored;
 	}
 
@@ -71,7 +71,7 @@ public class playerEntry {
 		playerID = inPlayerID;
 	}
 
-	public void setCareerTriesScored( int inCareerTriesScored ) {
+	public void setCareerTriesScored( String inCareerTriesScored ) {
 		careerTriesScored = inCareerTriesScored;
 	}
 
@@ -96,7 +96,7 @@ public class playerEntry {
 	}
 
 	public String toString( ) {
-		return ( playerName + "\t" + playerID + "\t" + careerTriesScored + "\t" + teamName + "\t" + teamID + "\t" + homeStadiumStreet + "\t" + homeStadiumTown + "\t" + homeStadiumPostcode );
+		return ( playerName + ", " + playerID + ", " + careerTriesScored + ", " + teamName + ", " + teamID + ", " + homeStadiumStreet + ", " + homeStadiumTown + ", " + homeStadiumPostcode );
 	}
 
 
