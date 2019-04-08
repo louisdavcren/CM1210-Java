@@ -8,6 +8,10 @@ public class playerStore {
 		entries = new Vector<playerEntry>();
 	}
 
+	public playerEntry get( int index ){
+		return entries.get(index);
+	}
+
 	public void add( String playerName, String playerID, String careerTriesScored, String teamName, String teamID, String homeStadiumStreet, String homeStadiumTown, String homeStadiumPostcode ) {
 		entries.add(new playerEntry(playerName, playerID, careerTriesScored, teamName, teamID, homeStadiumStreet, homeStadiumTown, homeStadiumPostcode));
 	}
