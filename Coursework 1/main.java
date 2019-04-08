@@ -16,7 +16,7 @@ public class main {
 			while( in.hasNextLine() ) {
 
 				String line = in.nextLine();
-				in.nextLine();
+				
 				String[] parts = line.split(",");
 				String playerName = parts[0];
 				String playerID = parts[1];
@@ -26,6 +26,8 @@ public class main {
 				String homeStadiumStreet = parts[5];
 				String homeStadiumTown = parts[6];
 				String homeStadiumPostcode = parts[7];
+
+
 
 				store.add( playerName, playerID, careerTriesScored, teamName, teamID, homeStadiumStreet, homeStadiumTown, homeStadiumPostcode );
 			}
@@ -46,8 +48,6 @@ public class main {
 
 
 	static void create( String filename ) throws IOException {
-
-		filename = filename + ".txt";
 
 		File file = new File( filename );
 
@@ -102,7 +102,7 @@ public class main {
 				store.add( playerName, playerID, careerTriesScored, teamName, teamID, homeStadiumStreet, homeStadiumTown, homeStadiumPostcode );
 
 			}
-			writeFile data = new writeFile(filename, true);
+			writeFile data = new writeFile(filename, false);
 			data.writeToFile( store.toString() );
 		}
 
