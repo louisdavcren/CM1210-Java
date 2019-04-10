@@ -172,9 +172,17 @@ public class main {
 			for (int i = 0; i < noEntries; i++) {	 
 
 				System.out.println( "entry: " + i );
-
-	 			System.out.println( "player name: " );
-				String playerName = in.nextLine();
+				while(true) {
+	 				System.out.println( "player name: " );
+					String playerName = in.nextLine();
+					if (Pattern.matches(,playerName)){
+						break;
+					}
+					else{
+						System.out.println("invalid input, names consist of only letters and spaces");
+						continue;
+					}
+				}
 				
 				System.out.println( "player id: " );
 				String playerID = in.nextLine();
