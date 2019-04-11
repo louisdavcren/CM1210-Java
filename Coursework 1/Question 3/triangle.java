@@ -1,3 +1,4 @@
+//Peter Snook 1842512
 public class triangle extends percussion {
 
 	private String singlenote;

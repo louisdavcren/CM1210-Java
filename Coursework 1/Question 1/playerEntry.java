@@ -1,3 +1,5 @@
+//Peter Snook 1842512
+
 public class playerEntry {
 
 	private String playerName;
@@ -5,6 +7,7 @@ public class playerEntry {
 	private String careerTriesScored;
 	private String teamName;
 	private String teamID;
+	private String homeStadiumName;
 	private String homeStadiumStreet;
 	private String homeStadiumTown;
 	private String homeStadiumPostcode;
@@ -15,17 +18,19 @@ public class playerEntry {
 		careerTriesScored = "0";
 		teamName = "";
 		teamID = "";
+		homeStadiumName = "";
 		homeStadiumStreet = "";
 		homeStadiumTown = "";
 		homeStadiumPostcode = "";
 	}
 
-	public playerEntry( String inPlayerName, String inPlayerID, String inCareerTriesScored, String inTeamName, String inTeamID, String inHomeStadiumStreet, String inHomeStadiumTown, String inHomeStadiumPostcode ) {
+	public playerEntry( String inPlayerName, String inPlayerID, String inCareerTriesScored, String inTeamName, String inTeamID, String inHomeStadiumName, String inHomeStadiumStreet, String inHomeStadiumTown, String inHomeStadiumPostcode ) {
 		playerName = inPlayerName;
 		playerID = inPlayerID;
 		careerTriesScored = inCareerTriesScored;
 		teamName = inTeamName;
 		teamID = inTeamID;
+		homeStadiumName = inHomeStadiumName;
 		homeStadiumStreet = inHomeStadiumStreet;
 		homeStadiumTown = inHomeStadiumTown;
 		homeStadiumPostcode = inHomeStadiumPostcode;
@@ -49,6 +54,10 @@ public class playerEntry {
 
 	public String getTeamID( ) {
 		return teamID;
+	}
+
+	public String getHomeStadiumName( ) {
+		return homeStadiumName;
 	}
 
 	public String getHomeStadiumStreet( ) {
@@ -83,6 +92,10 @@ public class playerEntry {
 		teamID = inTeamID;
 	}
 
+	public void setHomeStadiumName( String inHomeStadiumName ){
+		homeStadiumName = inHomeStadiumName;
+	}
+
 	public void setHomeStadiumStreet( String inHomeStadiumStreet ) {
 		homeStadiumStreet = inHomeStadiumStreet;
 	}
@@ -96,7 +109,7 @@ public class playerEntry {
 	}
 
 	public String toString( ) {
-		return ( playerName + ", " + playerID + ", " + careerTriesScored + ", " + teamName + ", " + teamID + ", " + homeStadiumStreet + ", " + homeStadiumTown + ", " + homeStadiumPostcode );
+		return ( playerName + ", " + playerID + ", " + careerTriesScored + ", " + teamName + ", " + teamID + ", " + homeStadiumName + ", " + homeStadiumStreet + ", " + homeStadiumTown + ", " + homeStadiumPostcode );
 	}
 
 

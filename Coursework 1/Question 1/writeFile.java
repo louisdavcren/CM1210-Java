@@ -1,3 +1,5 @@
+//Peter Snook 1842512
+
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.IOException;

@@ -1,3 +1,5 @@
+//Peter Snook 1842512
+
 import java.util.Vector;
 
 public class playerStore {
@@ -12,8 +14,8 @@ public class playerStore {
 		return entries.get(index);
 	}
 
-	public void add( String playerName, String playerID, String careerTriesScored, String teamName, String teamID, String homeStadiumStreet, String homeStadiumTown, String homeStadiumPostcode ) {
-		entries.add(new playerEntry(playerName, playerID, careerTriesScored, teamName, teamID, homeStadiumStreet, homeStadiumTown, homeStadiumPostcode));
+	public void add( String playerName, String playerID, String careerTriesScored, String teamName, String teamID, String homeStadiumName, String homeStadiumStreet, String homeStadiumTown, String homeStadiumPostcode ) {
+		entries.add(new playerEntry(playerName, playerID, careerTriesScored, teamName, teamID, homeStadiumName, homeStadiumStreet, homeStadiumTown, homeStadiumPostcode));
 	}
 
 	public String toString( ) {

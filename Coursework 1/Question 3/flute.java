@@ -1,3 +1,4 @@
+//Peter Snook 1842512
 public class flute extends woodwind {
 
 	private String category;

@@ -1,3 +1,4 @@
+//Peter Snook 1842512
 public class string extends instrument {
 
 	private int noStrings;

@@ -1,3 +1,4 @@
+//Peter Snook 1842512
 public class cello extends string {
 
 	private boolean stand;

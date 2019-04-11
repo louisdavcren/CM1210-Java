@@ -1,6 +1,10 @@
 import java.io.IOException;
 import java.io.File;
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+//Peter Snook 1842512
 
 public class Encrypt {
 
@@ -12,12 +16,13 @@ public class Encrypt {
 		}
 
 		try {
-	
-		File filename = new File(args[0]);
-		Scanner in = new Scanner(filename);
+		
+			String filename = args[0];
+	        FileReader fileReader = new FileReader(filename);
+	        BufferedReader bufferedReader = new BufferedReader(fileReader);
+	        String currentLine;
 
-			while ( in.hasNextLine() ) {
-				String currentLine = in.nextLine();
+			while ((currentLine = bufferedReader.readLine()) != null) {
 				for ( char character : currentLine.toCharArray() ) {
 					if ( Character.isLowerCase(character) ) {
 
@@ -38,7 +43,6 @@ public class Encrypt {
 				System.out.println();
 			}
 		}
-
 		catch ( IOException e ) {
 			System.out.println(e);
 			throw e;
